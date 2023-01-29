@@ -1,0 +1,27 @@
+﻿@using Turkiye.Models.Data
+@model List<tbl_il>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sehirler</title>
+</head>
+<body>
+    <div> 
+        <form>
+            <input name="q" placeholder="Aranacak şehir..."/>
+            <button>Ara</button>
+        </form>
+        @foreach (var item in Model)
+        {
+            <p>@item.il_ad (@item.il_id)</p>
+            <a href="/Turkıye/İlceler?sehir=@item.il_id">İlçeler</a>
+        }
+    </div>
+</body>
+</html>

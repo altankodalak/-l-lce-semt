@@ -1,0 +1,23 @@
+﻿@using Turkiye.Models.Data
+@model List<tbl_ilce>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>İlceler</title>
+</head>
+<body>
+    <div> 
+        @foreach (var item in Model)
+        {
+            <p>@item.ilce_ad</p>
+            <a href="/Turkıye/Semtler?ılce=@item.ilce_id">Semtler</a>
+        }
+    </div>
+</body>
+</html>

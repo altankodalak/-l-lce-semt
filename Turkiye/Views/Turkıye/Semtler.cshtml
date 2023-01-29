@@ -1,0 +1,22 @@
+﻿@using Turkiye.Models.Data
+@model List<tbl_semt>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Semtler</title>
+</head>
+<body>
+    <div>
+        @foreach (var item in Model)
+        {
+          <p> @item.semt_ad</p>
+        }
+    </div>
+</body>
+</html>
